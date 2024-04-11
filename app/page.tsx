@@ -26,18 +26,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="lg:w-1/4 mx-auto pl-8">
+      <div className="mx-auto mb-4 flex flex-col items-center justify-center lg:gap-0">
         <Image
-          src="/lilgnar.png"
-          alt="Next.js Logo"
-          width={380}
-          height={250}
+          src="/lilgnar2.png"
+          alt="lilgnars Logo"
+          width={750}
+          height={450}
           priority
         />
-        <div className="mx-auto mb-4">
+        <div className="text-center lg:text-left lg:mt-1">
           <p>
-          
-          
           Our Social Project aims to bring together young skateboarders to explore skate spots across the city while prioritizing safety, skill development, and fun. With the guidance of experienced skaters, we seek to create a supportive environment where children can overcome fears, learn new skills, and build confidence through skateboarding challenges.
           </p>
         </div>
