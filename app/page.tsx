@@ -35,6 +35,7 @@ export default function Home() {
           priority
         />
         <div className="text-center lg:text-left lg:mt-1">
+          <h2>Lilgnars</h2>
           <p>
           Our Social Project aims to bring together young skateboarders to explore skate spots across the city while prioritizing safety, skill development, and fun. With the guidance of experienced skaters, we seek to create a supportive environment where children can overcome fears, learn new skills, and build confidence through skateboarding challenges.
           </p>
@@ -89,7 +90,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
+            Lilgnars
           </p>
         </a>
 
