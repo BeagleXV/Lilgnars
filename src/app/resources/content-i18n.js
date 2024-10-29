@@ -237,22 +237,22 @@ const createI18nContent = (t) => {
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/lil01.jpeg',
+                src: '/images/gallery/lil01.jpg',
                 alt: 'Lil Gnars mascote',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/lil02.jpeg',
+                src: '/images/gallery/lil02.jpg',
                 alt: 'Lil Gnars mascote',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/lil04.jpeg',
+                src: '/images/gallery/lil04.jpg',
                 alt: 'Lil Gnars mascote',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/lil05.jpeg',
+                src: '/images/gallery/lil05.jpg',
                 alt: 'Lil Gnars mascote',
                 orientation: 'horizontal'
             },
