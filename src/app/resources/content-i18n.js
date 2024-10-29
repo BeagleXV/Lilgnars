@@ -77,13 +77,13 @@ const createI18nContent = (t) => {
             title: t("about.work.title"),
             experiences: [
                 {
-                    company: 'Lil Gnars RIO DE JANEIRO',
+                    company: 'Lil Gnars - RIO DE JANEIRO',
                     timeframe: t("about.work.experiences.Lil Gnars 1.timeframe"),
                     role: t("about.work.experiences.Lil Gnars 1.role"),
                     achievements: t("about.work.experiences.Lil Gnars 1.achievements").split(";"),
                     images: [ // optional: leave the array empty if you don't want to display images
                         {
-                            src: '/images/projects/project-01/lil01.jpeg',
+                            src: '/images/projects/project-01/cover-01.jpg',
                             alt: 'Lil Gnars 1',
                             width: 16,
                             height: 9
@@ -91,24 +91,30 @@ const createI18nContent = (t) => {
                     ]
                 },
                 {
-                    company: 'RIO',
+                    company: 'Lil Gnars - Parque Rita Lee',
                     timeframe: t("about.work.experiences.Lil Gnars 2.timeframe"),
                     role: t("about.work.experiences.Lil Gnars 2.role"),
                     achievements: t("about.work.experiences.Lil Gnars 2.achievements").split(";"),
                     images: [ {
-                        src: '/images/projects/project-01/lil03.jpeg',
+                        src: '/images/projects/project-02/cover-01.jpg',
                         alt: 'Lil Gnars 2',
                         width: 16,
                         height: 9
                     }]
                 },
                 {
-                    company: 'RIO',
+                    company: 'Lil Gnars - Churrasco',
                     timeframe: t("about.work.experiences.Lil Gnars 3.timeframe"),
                     role: t("about.work.experiences.Lil Gnars 3.role"),
                     achievements: t("about.work.experiences.Lil Gnars 3.achievements").split(";"),
                     images: [ {
-                        src: '/images/projects/project-01/lil03.jpeg',
+                        src: '/images/projects/project-03/cover-01.jpg',
+                        alt: 'Lil Gnars 3',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-03/cover-02.jpg',
                         alt: 'Lil Gnars 3',
                         width: 16,
                         height: 9
