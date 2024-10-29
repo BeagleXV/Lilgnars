@@ -5,6 +5,16 @@ import styles from '@/components/about/about.module.scss'
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
+import sanitize from 'html-react-parser';
+import util from 'util';
+import parse from 'html-react-parser';
+
+
+type ZoraVideoProps = {
+    videoLink: string;
+    videoUrl: string;
+};
+
 export async function generateMetadata(
     { params: { locale } }: { params: { locale: string } }
 ) {
@@ -38,17 +48,15 @@ export async function generateMetadata(
     };
 }
 
-const ZoraVideo = ({ videoLink, videoUrl }) => {
+const ZoraVideo: React.FC<ZoraVideoProps> = ({ videoLink, videoUrl }) => {
     return (
-        <div
-            className="iframely-embed"
-            style={{ padding: '52.2088% 0 0', paddingBottom: '52.2088%', marginTop: '120px' }}
+        <Flex className="iframely-embed"
+            style={{ padding: '0 0', paddingBottom: '', marginTop: '10px' }}
         >
-            <div className="iframely-responsive">
+            <Flex className="iframely-responsive">
                 <a href={videoLink} data-iframely-url={videoUrl}></a>
-            </div>
-            <script async src="//iframely.net/embed.js"></script>
-        </div>
+            </Flex>
+        </Flex>
     );
 };
 
@@ -80,6 +88,7 @@ export default function About(
             items: about.technical.skills.map(skill => skill.title)
         },
     ]
+
     return (
         <Flex
             fillWidth maxWidth="m"
@@ -343,17 +352,18 @@ export default function About(
                             Videos
                         </Heading>
 
-                        <ZoraVideo 
-                            videoLink="https://zora.co/collect/base:0xa54244b4e023b51ea7b8fee4bdb5c04314859c10/4" 
+                        <ZoraVideo
+                            videoLink="https://zora.co/collect/base:0xa54244b4e023b51ea7b8fee4bdb5c04314859c10/4"
                             videoUrl="//iframely.net/j6pWf3s" />
 
-                        <ZoraVideo 
-                            videoLink="https://zora.co/collect/base:0xa54244b4e023b51ea7b8fee4bdb5c04314859c10/4" 
+                        <ZoraVideo
+                            videoLink="https://zora.co/collect/base:0xa54244b4e023b51ea7b8fee4bdb5c04314859c10/4"
                             videoUrl="//iframely.net/WdDtdfs" />
 
-                        <ZoraVideo 
-                            videoLink="https://zora.co/collect/base:0xa54244b4e023b51ea7b8fee4bdb5c04314859c10/2" 
+                        <ZoraVideo
+                            videoLink="https://zora.co/collect/base:0xa54244b4e023b51ea7b8fee4bdb5c04314859c10/2"
                             videoUrl="//iframely.net/oGWyq92" />
+
 
                     </>
 

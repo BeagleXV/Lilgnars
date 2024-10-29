@@ -138,6 +138,10 @@ export default async function RootLayout({
 					</Flex>
 				</Flex>
 			</NextIntlClientProvider>
+
+			{/* Zora Videos Embed */}
+			<script async src="//iframely.net/embed.js"></script>
+			
 		</ThirdwebProvider>
 	);
 }
