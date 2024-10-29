@@ -1,10 +1,16 @@
+import mdx from '@next/mdx';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withMDX = mdx({
+    extension: /\.mdx?$/,
+    options: { },
+});
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // fixes wallet connect dependency issue https://docs.walletconnect.com/web3modal/nextjs/about#extra-configuration
-  webpack: (config) => {
-    config.externals.push("pino-pretty", "lokijs", "encoding");
-    return config;
-  },
+    pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
 };
 
-export default nextConfig;
+export default withNextIntl(withMDX(nextConfig));

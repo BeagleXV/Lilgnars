@@ -1,0 +1,86 @@
+{
+    "person": {
+        "role": "Projeto Skate for Life"
+    },
+    "newsletter": {
+        "title": "Se inscreva na Newsletter da {name}",
+        "description": "Escrevemos sobre nossos projetos e o estilo de vida de Skate.",
+        "button": "Inscrever"
+    },
+    "home": {
+        "label": "Home",
+        "title": "Projeto {name}",
+        "description": "Project website showcasing our work as a {role}",
+        "headline": "Projeto mto loko para levar skate life style...",
+        "subline": "Somos lil Ganrs um projeto social ... ... ... "
+    },
+    "about": {
+        "label": "Sobre",
+        "title": "Sobre",
+        "description": "Descubra mais sobre Lil Gnars",
+        "intro": {
+            "title": "Introdução",
+            "description": "Lil Gnars will organize a series of 2 events along the beautiful shores of Rio de Janeiro, where professional skateboarders will engage with local youth. Through fun challenges and missions, we will in still knowledge about skateboarding as well as the importance of healthy living, street safety, Nature Care and responsible behavior. \n\n Will Be in Maricá and Saquarema, a Cities with a new urbanism. Wich they maded a new Urbanism Perfect for be explored n Shreded. Saquarema got a new big skatepark and Maricá got a New SideWalks and Big Plaza for be Shreded."
+        },
+        "work": {
+            "title": "Últimos Eventos",
+            "experiences": {
+                "Lil Gnars 1": {
+                    "timeframe": "2024",
+                    "role": "Rio de Janeiro",
+                    "achievements": "Primeiro Gnars day."
+                },
+                "Lil Gnars 2": {
+                    "timeframe": "2024",
+                    "role": "no Parque Rita Lee",
+                    "achievements": "Segundo dia do nosso evento incrível com a nova geração do skate brasileiro puro, nos divertimos e amamos!"
+                },
+                "Lil Gnars 3": {
+                    "timeframe": "2024",
+                    "role": "Dia de Churrasco",
+                    "achievements": "O último dia do Lil Gnars foi pura diversão e sorrisos no rosto no nosso churrasco, no pôr do sol demos ao Lil Gnars pranchas novas para as crianças! A vibe era indescritível."
+                }
+            }
+        },
+        "studies": {
+            "title": "Studies",
+            "institutions": {
+                "Estudo de Caso 1": {
+                    "description": "Estudo de Caso 1."
+                },
+                "Estudo de Caso 2": {
+                    "description": "Estudo de Caso 2."
+                }
+            }
+        },
+        "technical": {
+            "title": "Gnars",
+            "skills": {
+                "Gnars": {
+                    "description": "Gnars unnatural speed."
+                },
+                "Nextjs": {
+                    "description": "Building next gen apps with Next.js + Once UI + Supabase."
+                }
+            }
+        }
+    },
+    "blog": {
+        "label": "Blog",
+        "title": "Writing about skate lifestyle...",
+        "description": "Read what {name} has been up to recently"
+    },
+    "work": {
+        "label": "Projetos",
+        "title": "Nossos Projetos",
+        "description": "Saiba mais sobre nossos projetos da {name}."
+    },
+    "gallery": {
+        "label": "Galeria",
+        "title": "Galeria de Fotos",
+        "description": "Visite nossa Galeria de Fotos"
+    },
+    "projectCard": {
+        "label": "Leia Mais"
+    }
+}

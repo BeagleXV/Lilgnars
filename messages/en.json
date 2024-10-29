@@ -1,0 +1,86 @@
+{
+    "person": {
+        "role": "Project Skate for Life"
+    },
+    "newsletter": {
+        "title": "Subscribe to {name}'s Newsletter",
+        "description": "We write about our projects and news about skate lifesyle.",
+        "button": "Sign up"
+    },
+    "home": {
+        "label": "Home",
+        "title": "{name}'s Project",
+        "description": "Project website showcasing our work as a {role}",
+        "headline": "Skate for Life",
+        "subline": "We are Lil Gnars, a cool skate project for kids."
+    },
+    "about": {
+        "label": "About",
+        "title": "About",
+        "description": "Meet {name}",
+        "intro": {
+            "title": "Introduction",
+            "description": "We are a social skate project."
+        },
+        "work": {
+            "title": "Past Events",
+            "experiences": {
+                "Lil Gnars 1": {
+                    "timeframe": "2024",
+                    "role": "Rio de Janeiro",
+                    "achievements": "The first Lil Gnars day."
+                },
+                "Lil Gnars 2": {
+                    "timeframe": "2024",
+                    "role": "at Rita Lee's Park",
+                    "achievements": "Second Day of our amazing event with the new generation of pure Brazilian skateboarding, we had fun and love!"
+                },
+                "Lil Gnars 3": {
+                    "timeframe": "2024",
+                    "role": "Barbecue day",
+                    "achievements": "The final day of Lil Gnars was pure fun and smiling face at our barbecue, at the sunset we give the Lil Gnars Brand new boards for the kids! The vibe was undiscraribel."
+                }
+            }
+        },
+        "studies": {
+            "title": "Hide",
+            "institutions": {
+                "University of Jakarta": {
+                    "description": "Hide"
+                },
+                "Build the Future": {
+                    "description": "Hide"
+                }
+            }
+        },
+        "technical": {
+            "title": "Technical",
+            "skills": {
+                "Gnars": {
+                    "description": "Gnars unnatural speed."
+                },
+                "Nextjs": {
+                    "description": "Building next gen apps with Next.js + Once UI + Supabase."
+                }
+            }
+        }
+    },
+    "blog": {
+        "label": "Blog",
+        "title": "Writing about design and tech...",
+        "description": "Read what {name} has been up to recently"
+    },
+    "work": {
+        "label": "Projects",
+        "title": "My projects",
+        "description": "Know more about {name} projects"
+    },
+    "gallery": {
+        "label": "Gallery",
+        "title": "My photo gallery",
+        "description": "A photo collection by {name}"
+    },
+    "projectCard": {
+        "label": "Read More"
+    }
+}
