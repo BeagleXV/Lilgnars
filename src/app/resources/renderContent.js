@@ -14,7 +14,8 @@ const renderContent = (t) => {
             about,
             blog,
             work,
-            gallery
+            gallery,
+            nftspage
         }
     }
 };

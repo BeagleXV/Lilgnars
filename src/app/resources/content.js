@@ -7,6 +7,7 @@ const person = {
         return `${this.firstName} ${this.lastName}`;
     },
     role:      'Supercoll Gnars Project for Kids',
+    scheduleclass: 'Schedule Class',
     avatar:    '/images/avatar.jpg',
     location:  'America/Sao_Paulo',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: ['English', 'Portuguese']  // optional: Leave the array empty if you don't want to display languages
@@ -32,8 +33,8 @@ const social = [
     //     link: 'https://www.linkedin.com/company/once-ui/',
     // },
     {
-        name: 'Twitter',
-        icon: 'twitter',
+        name: 'X',
+        icon: 'X',
         link: 'https://x.com/lilgnars',
     },
     {

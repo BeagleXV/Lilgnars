@@ -35,6 +35,8 @@ import {
 	FaXTwitter
 } from "react-icons/fa6";
 
+import { RiNftFill } from "react-icons/ri";
+
 export const iconLibrary: Record<string, IconType> = {
 	chevronUp: HiChevronUp,
     chevronDown: HiChevronDown,
@@ -62,4 +64,5 @@ export const iconLibrary: Record<string, IconType> = {
 	github: FaGithub,
 	linkedin: FaLinkedin,
 	x: FaXTwitter,
+	nft: RiNftFill,
 };

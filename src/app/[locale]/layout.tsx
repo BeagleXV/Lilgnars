@@ -114,9 +114,17 @@ export default async function RootLayout({
 						fillWidth margin="0" padding="0"
 						direction="column">
 						<Background
-							gradient={effects.gradient}
-							dots={effects.dots}
-							lines={effects.lines} />
+							mask="cursor"
+							gradient={{
+								display: effects.gradient
+							}}
+							dots={{
+								display: effects.dots
+							}}
+							lines={{
+								display: effects.lines
+							}}
+						/>
 						<Flex
 							fillWidth
 							minHeight="16">
@@ -141,7 +149,7 @@ export default async function RootLayout({
 
 			{/* Zora Videos Embed */}
 			<script async src="//iframely.net/embed.js"></script>
-			
+
 		</ThirdwebProvider>
 	);
 }

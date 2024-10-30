@@ -1,6 +1,7 @@
 {
     "person": {
-        "role": "Project Skate for Life"
+        "role": "Project Skate for Life",
+        "scheduleclass": "Schedule a Class"
     },
     "newsletter": {
         "title": "Subscribe to {name}'s Newsletter",
@@ -79,6 +80,11 @@
         "label": "Gallery",
         "title": "My photo gallery",
         "description": "A photo collection by {name}"
+    },
+    "nftspage": {
+        "label": "NFT",
+        "title": "Our NFTs",
+        "description": "Mint your exclusive Lil Gnars NFT now!"
     },
     "projectCard": {
         "label": "Read More"

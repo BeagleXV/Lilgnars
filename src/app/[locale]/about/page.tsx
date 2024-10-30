@@ -185,7 +185,7 @@ export default function About(
                                 </Flex>
                                 <Flex
                                     paddingX="8">
-                                    Schedule a call
+                                    {person.scheduleclass}
                                 </Flex>
                                 <IconButton
                                     href={about.calendar.link}

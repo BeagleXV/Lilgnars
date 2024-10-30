@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from "@/once-ui/components";
+import { Flex, Heading, Text, Button } from "@/once-ui/components";
 
 export default function NotFound() {
     return (
