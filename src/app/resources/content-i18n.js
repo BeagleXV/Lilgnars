@@ -8,6 +8,7 @@ const createI18nContent = (t) => {
             return `${this.firstName} ${this.lastName}`;
         },
         role:      t("person.role"),
+        scheduleclass: t("person.scheduleclass"),
         avatar:    '/images/avatar.jpg',
         location:  'America/Sao_Paulo',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
         languages: ['English', 'Portugues']   // optional: Leave the array empty if you don't want to display languages
@@ -64,7 +65,7 @@ const createI18nContent = (t) => {
             display: true
         },
         calendar: {
-            display: false,
+            display: true,
             link: 'https://cal.com'
         },
         intro: {
@@ -268,6 +269,19 @@ const createI18nContent = (t) => {
             },
         ]
     }
+    const nftspage = {
+        label: t("nftspage.label"),
+        title: t("nftspage.title"),
+        description: t("nftspage.description"),
+        images: [
+            {
+                src: '/images/gallery/ChuckSlappy.jpg',
+                alt: 'Lil Gnars ChuckSlappy',
+                orientation: 'vertical'
+            },
+        ]
+    }
+
     return {
         person,
         social,
@@ -276,7 +290,8 @@ const createI18nContent = (t) => {
         about,
         blog,
         work,
-        gallery
+        gallery,
+        nftspage
     }
 };
 

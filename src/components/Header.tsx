@@ -71,7 +71,7 @@ export const Header = () => {
     }
 
     const t = useTranslations();
-    const { person, home, about, blog, work, gallery } = renderContent(t);
+    const { person, home, about, blog, work, gallery, nftspage } = renderContent(t);
 
     return (
         <Flex style={{ height: 'fit-content' }}
@@ -80,17 +80,6 @@ export const Header = () => {
             zIndex={9}
             fillWidth padding="8"
             justifyContent="center">
-            {/* <Flex
-                hide="s">
-                <Logo/>
-            </Flex>
-            <Flex
-                show="s"
-                gap="4"
-                alignItems="center">
-                <NavIcon/>
-                <Logo wordmark={true}/>
-            </Flex> */}
             <Flex
                 hide="s"
                 paddingLeft="12" fillWidth
@@ -174,6 +163,14 @@ export const Header = () => {
                             href={`/${params?.locale}/gallery`}
                             selected={pathname.startsWith('/gallery')}>
                             <Flex paddingX="2" hide="s">{gallery.label}</Flex>
+                        </ToggleButton>
+                    )}
+                    {routes['/nfts'] && (
+                        <ToggleButton
+                            prefixIcon="nft"
+                            href={`/${params?.locale}/nfts`}
+                            selected={pathname.startsWith('/nfts')}>
+                            <Flex paddingX="2" hide="s">{nftspage.label}</Flex>
                         </ToggleButton>
                     )}
                 </Flex>
