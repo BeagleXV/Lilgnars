@@ -15,7 +15,52 @@ import { useTranslations } from "next-intl";
 import { i18n } from "@/app/resources/config";
 
 import { ConnectButton } from "thirdweb/react";
+import { darkTheme } from "thirdweb/react";
 import { client } from "../app/client3w";
+
+
+type web3rdTheme = {
+    colors: {
+      accentButtonBg: string;
+      accentButtonText: string;
+      accentText: string;
+      borderColor: string;
+      connectedButtonBg: string;
+      connectedButtonBgHover: string;
+      danger: string;
+      inputAutofillBg: string;
+      modalBg: string;
+      modalOverlayBg: string;
+      primaryButtonBg: string;
+      primaryButtonText: string;
+      primaryText: string;
+      scrollbarBg: string;
+      secondaryButtonBg: string;
+      secondaryButtonHoverBg: string;
+      secondaryButtonText: string;
+      secondaryIconColor: string;
+      secondaryIconHoverBg: string;
+      secondaryIconHoverColor: string;
+      secondaryText: string;
+      selectedTextBg: string;
+      selectedTextColor: string;
+      separatorLine: string;
+      skeletonBg: string;
+      success: string;
+      tertiaryBg: string;
+      tooltipBg: string;
+      tooltipText: string;
+    };
+    fontFamily: string;
+    type: "light" | "dark";
+  };
+
+const web3rdCustomTheme: web3rdTheme = darkTheme({
+    colors: {
+      modalBg: "red",
+      secondaryButtonBg: "violet",
+    },
+  });
 
 type TimeDisplayProps = {
     timeZone: string;

@@ -1,6 +1,6 @@
-import { blockExplorer } from "../consts/parameters";
-import { LinkIcon } from "./icons/LinkIcon";
-import { truncateAddress } from "../utils/truncateAddress";
+import { blockExplorer } from "../../consts/parameters";
+// import { LinkIcon } from "./icons/LinkIcon";
+import { truncateAddress } from "../../utils/truncateAddress";
 import type { FC } from "react";
 
 interface HistoryCardProps {
@@ -36,7 +36,7 @@ export const HistoryCard: FC<HistoryCardProps> = ({ event }) => {
         </div>
       </div>
 
-      <LinkIcon />
+      {/* <LinkIcon /> */}
     </a>
   );
 };

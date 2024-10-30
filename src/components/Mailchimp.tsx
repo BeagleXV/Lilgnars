@@ -68,9 +68,16 @@ export const Mailchimp = (
             background="surface" border="neutral-medium" borderStyle="solid-1">
             <Background
                 position="absolute"
-                gradient={mailchimp.effects.gradient}
-                dots={mailchimp.effects.dots}
-                lines={mailchimp.effects.lines}/>
+                gradient={{
+                    display: mailchimp.effects.gradient
+                }}
+                dots={{
+                    display: mailchimp.effects.dots
+                }}
+                lines={{
+                    display: mailchimp.effects.lines
+                }}
+                />
             <Heading style={{position: 'relative'}}
                 marginBottom="s"
                 variant="display-strong-xs">
