@@ -15,7 +15,7 @@ const createI18nContent = (t) => {
     }
 
     const newsletter = {
-        display: true,
+        display: false,
         title: <>{t("newsletter.title", {name: person.name})}</>,
         description: <>{t("newsletter.description")}</>
     }
@@ -102,7 +102,7 @@ const createI18nContent = (t) => {
                     role: t("about.work.experiences.Lil Gnars 2.role"),
                     achievements: t("about.work.experiences.Lil Gnars 2.achievements").split(";"),
                     images: [ {
-                        src: '/images/projects/project-02/cover-01.jpeg',
+                        src: '/images/projects/project-02/cover-02.jpg',
                         alt: 'Lil Gnars 2',
                         width: 16,
                         height: 9
@@ -113,19 +113,19 @@ const createI18nContent = (t) => {
                     timeframe: t("about.work.experiences.Lil Gnars 3.timeframe"),
                     role: t("about.work.experiences.Lil Gnars 3.role"),
                     achievements: t("about.work.experiences.Lil Gnars 3.achievements").split(";"),
-                    images: [ {
-                        src: '/images/projects/project-03/cover-02.jpg',
+                    images: [{
+                        src: '/images/projects/project-03/cover-03.jpg',
                         alt: 'Lil Gnars 3',
                         width: 16,
                         height: 9
                     },
-                    {
-                        src: '/images/gallery/lilgnars-05.png',
-                        alt: 'Lil Gnars 3',
-                        width: 16,
-                        height: 9
-                    }]
-                }
+                    // {
+                    //     src: '/images/gallery/lilgnars-05.png',
+                    //     alt: 'Lil Gnars 3',
+                    //     width: 16,
+                    //     height: 9
+                    // }
+                    ]}
             ]
         },
         studies: {
@@ -213,14 +213,19 @@ const createI18nContent = (t) => {
                 orientation: 'horizontal'
             },
             { 
-                src: '/images/gallery/lilgnars-03.png',
+                src: '/images/gallery/lilgnars-03.jpg',
                 alt: 'Lil Gnars',
-                orientation: 'vertical'
+                orientation: 'horizontal'
             },
             { 
                 src: '/images/gallery/lilgnars-04.jpg',
                 alt: 'Lil Gnars',
                 orientation: 'horizontal'
+            },
+            {
+                src: '/images/mascote-01.png',
+                alt: 'Lil Gnars',
+                orientation: 'vertical'
             },
             {
                 src: '/images/gallery/lilgnars-05.jpg',
@@ -233,7 +238,7 @@ const createI18nContent = (t) => {
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/lilgnars-07.png',
+                src: '/images/gallery/lilgnars-07.jpg',
                 alt: 'Lil Gnars',
                 orientation: 'vertical'
             },
@@ -253,14 +258,24 @@ const createI18nContent = (t) => {
                 orientation: 'horizontal'
             },
             {
+                src: '/images/mascote-02.png',
+                alt: 'Lil Gnars',
+                orientation: 'vertical'
+            },
+            {
+                src: '/images/skateboard.png',
+                alt: 'Lil Gnars',
+                orientation: 'vertical'
+            },
+            {
                 src: '/images/gallery/lilgnars-11.jpg',
                 alt: 'Lil Gnars',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/lilgnars-12.jpg',
+                src: '/images/mascote-03.png',
                 alt: 'Lil Gnars',
-                orientation: 'horizontal'
+                orientation: 'vertical'
             },
         ]
     }
@@ -268,13 +283,7 @@ const createI18nContent = (t) => {
         label: t("nftspage.label"),
         title: t("nftspage.title"),
         description: t("nftspage.description"),
-        images: [
-            {
-                src: '/images/gallery/ChuckSlappy.jpg',
-                alt: 'Lil Gnars ChuckSlappy',
-                orientation: 'vertical'
-            },
-        ]
+        images: []
     }
 
     return {
