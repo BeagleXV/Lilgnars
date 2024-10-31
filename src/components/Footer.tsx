@@ -60,7 +60,8 @@ export const Footer = ({
                         {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
                         / Social Skate Project Powered by:
                         <SmartLink style={{ marginLeft: '-0.01rem' }} href="https://once-ui.com/">Once UI</SmartLink>
-                        and <SmartLink style={{ marginLeft: '-0.05rem' }} href="https://skatehive.app/">Skate Hive App</SmartLink>
+                        <SmartLink style={{ marginLeft: '-0.05rem' }} href="https://skatehive.app/">Skate Hive App</SmartLink>
+                        and <SmartLink style={{ marginLeft: '-0.01rem' }} href="https://gnars.com/">Gnars</SmartLink>
                     </Text>
                 </Text>
                 <Flex
