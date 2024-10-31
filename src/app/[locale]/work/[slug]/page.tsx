@@ -1,40 +1,40 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from '@/components/mdx'
 import { formatDate, getPosts } from '@/app/utils'
-import { AvatarGroup, Button, Flex, Heading, SmartImage, Text } from '@/once-ui/components'
+import { AvatarGroup, Button, Flex, Grid, Heading, SmartImage, Text } from '@/once-ui/components'
 import { baseURL, renderContent } from '@/app/resources';
 import { routing } from '@/i18n/routing';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 interface WorkParams {
-    params: {
-        slug: string;
+	params: {
+		slug: string;
 		locale: string;
-    };
+	};
 }
 
 export async function generateStaticParams() {
 	const locales = routing.locales;
-    
-    // Create an array to store all posts from all locales
-    const allPosts = [];
 
-    // Fetch posts for each locale
-    for (const locale of locales) {
-        const posts = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]);
-        allPosts.push(...posts.map(post => ({
-            slug: post.slug,
-            locale: locale,
-        })));
-    }
+	// Create an array to store all posts from all locales
+	const allPosts = [];
 
-    return allPosts;
+	// Fetch posts for each locale
+	for (const locale of locales) {
+		const posts = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]);
+		allPosts.push(...posts.map(post => ({
+			slug: post.slug,
+			locale: locale,
+		})));
+	}
+
+	return allPosts;
 }
 
 export function generateMetadata({ params: { slug, locale } }: WorkParams) {
 	let post = getPosts(['src', 'app', '[locale]', 'work', 'projects', locale]).find((post) => post.slug === slug)
-	
+
 	if (!post) {
 		return
 	}
@@ -89,8 +89,8 @@ export default function Project({ params }: WorkParams) {
 	const { person } = renderContent(t);
 
 	const avatars = post.metadata.team?.map((person) => ({
-        src: person.avatar,
-    })) || [];
+		src: person.avatar,
+	})) || [];
 
 	return (
 		<Flex as="section"
@@ -111,7 +111,7 @@ export default function Project({ params }: WorkParams) {
 						image: post.metadata.image
 							? `https://${baseURL}${post.metadata.image}`
 							: `https://${baseURL}/og?title=${post.metadata.title}`,
-							url: `https://${baseURL}/${params.locale}/work/${post.slug}`,
+						url: `https://${baseURL}/${params.locale}/work/${post.slug}`,
 						author: {
 							'@type': 'Person',
 							name: person.name,
@@ -139,20 +139,20 @@ export default function Project({ params }: WorkParams) {
 					aspectRatio="16 / 9"
 					radius="m"
 					alt="image"
-					src={post.metadata.images[0]}/>
+					src={post.metadata.images[0]} />
 			)}
-			<Flex style={{margin: 'auto'}}
+			<Flex style={{ margin: 'auto' }}
 				as="article"
 				maxWidth="xs" fillWidth
 				direction="column">
 				<Flex
 					gap="12" marginBottom="24"
 					alignItems="center">
-					{ post.metadata.team && (
+					{post.metadata.team && (
 						<AvatarGroup
 							reverseOrder
 							avatars={avatars}
-							size="m"/>
+							size="m" />
 					)}
 					<Text
 						variant="body-default-s"
@@ -161,6 +161,26 @@ export default function Project({ params }: WorkParams) {
 					</Text>
 				</Flex>
 				<CustomMDX source={post.content} />
+				{post.metadata.images.length > 0 && (
+					<Grid
+					border="brand-medium"
+					borderStyle="solid-1"
+					columns="repeat(2, 1fr)"
+					gap="24"
+					padding="24"
+					background="brand-medium"
+				  >
+						{post.metadata.images.map((image, index) => (
+							<SmartImage
+								key={index}
+								aspectRatio="16 / 9"
+								radius="m"
+								alt="image"
+								enlarge
+								src={image} />
+						))}
+					</Grid>
+				)}
 			</Flex>
 		</Flex>
 	)
