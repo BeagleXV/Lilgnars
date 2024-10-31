@@ -349,7 +349,7 @@ export default function About(
                             as="h2"
                             id={about.technical.title}
                             variant="display-strong-s" marginBottom="40">
-                            Videos
+                            {/* Videos */}
                         </Heading>
 
                         <ZoraVideo

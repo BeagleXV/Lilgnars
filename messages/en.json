@@ -1,6 +1,6 @@
 {
     "person": {
-        "role": "Project Skate for Life",
+        "role": "Shreding Hard, Dreaming Big!",
         "scheduleclass": "Schedule a Class"
     },
     "newsletter": {
@@ -10,10 +10,10 @@
     },
     "home": {
         "label": "Home",
-        "title": "{name}'s Project",
-        "description": "Project website showcasing our work as a {role}",
-        "headline": "Skate for Life",
-        "subline": "We are Lil Gnars, a cool skate project for kids."
+        "title": "{name}: Shred Hard, Dream Big!",
+        "description": "Lil Gnars is on a mission to spread the stoke of skateboarding to kids who need it most! With our skate classes, we're not just teaching tricks—we’re building confidence, community, and lifelong love for skate culture. Plus, kids have the chance to earn their own board, thanks to our rad partners and supporters!",
+        "headline": "Shreding Hard, Dreaming Big!",
+        "subline": "Bringing Skate to Every Kid"
     },
     "about": {
         "label": "About",
@@ -29,28 +29,28 @@
                 "Lil Gnars 1": {
                     "timeframe": "2024",
                     "role": "Rio de Janeiro",
-                    "achievements": "The first Lil Gnars day."
+                    "achievements": "We kicked off a class at one of Rio’s popular skate spots, introducing kids to the fundamentals and getting them on their boards for the first time. Every skater left with new skills and a full lunch."
                 },
                 "Lil Gnars 2": {
                     "timeframe": "2024",
                     "role": "at Rita Lee's Park",
-                    "achievements": "Second Day of our amazing event with the new generation of pure Brazilian skateboarding, we had fun and love!"
+                    "achievements": "An exciting session at Rita Lee Park brought together kids from the area to skate, learn, and grow in confidence. It was all about community, connection, and carving those first lines—plus, every kid enjoyed a well-deserved lunch to power through the day."
                 },
                 "Lil Gnars 3": {
                     "timeframe": "2024",
                     "role": "Barbecue day",
-                    "achievements": "The final day of Lil Gnars was pure fun and smiling face at our barbecue, at the sunset we give the Lil Gnars Brand new boards for the kids! The vibe was undiscraribel."
+                    "achievements": "Our biggest event yet! We wrapped up an epic skate class with a BBQ, inviting kids and families to join in. It was all about having fun, sharing food, and celebrating the progress of our young skaters."
                 }
             }
         },
         "studies": {
-            "title": "Hide",
+            "title": "Studies",
             "institutions": {
-                "University of Jakarta": {
-                    "description": "Hide"
+                "Estudo de Caso 1": {
+                    "description": "Estudo de Caso 1."
                 },
-                "Build the Future": {
-                    "description": "Hide"
+                "Estudo de Caso 2": {
+                    "description": "Estudo de Caso 2."
                 }
             }
         },
@@ -83,8 +83,8 @@
     },
     "nftspage": {
         "label": "NFT",
-        "title": "Our NFTs",
-        "description": "Mint your exclusive Lil Gnars NFT now!"
+        "title": "Gnars NFTs",
+        "description": "Mint your exclusive Gnars NFT!"
     },
     "projectCard": {
         "label": "Read More"

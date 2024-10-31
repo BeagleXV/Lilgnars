@@ -1,7 +1,5 @@
 'use client'
-import { Flex, Heading, Text, SmartImage, GlitchFx } from "@/once-ui/components";
-
-import Masonry from 'react-masonry-css';
+import { Flex, Heading, Text, Spinner, GlitchFx } from "@/once-ui/components";
 import MasonryGrid from "@/components/nftspage/MasonryGrid";
 
 import { baseURL, renderContent } from "@/app/resources";
@@ -17,7 +15,6 @@ import { getNFT, getNFTs, totalSupply } from "thirdweb/extensions/erc721";
 import { useReadContract } from "thirdweb/react";
 import { getContractMetadata } from "thirdweb/extensions/common";
 import { useEffect, useState } from "react";
-
 
 // export async function generateMetadata(
 // 	{params: {locale}}: { params: { locale: string }}
@@ -61,7 +58,7 @@ export default function Nfts(
 	const t = useTranslations();
 	const { nftspage, person } = renderContent(t);
 
-	const nftsPerPage = 30;
+	const nftsPerPage = 33;
 	const [page, setPage] = useState(1);
 	const [search, setSearch] = useState<string>("");
 	const debouncedSearchTerm = useDebounce(search, 500);
@@ -101,8 +98,6 @@ export default function Nfts(
 			setNft(null);
 		}
 	}, [debouncedSearchTerm]);
-
-
 
 	const breakpointColumnsObj = {
 		default: 4,
@@ -153,47 +148,20 @@ export default function Nfts(
 						<Heading
 							className={styles.textAlign}
 							variant="display-strong-xl">
-							{person.name}
+							{nftspage.title}
 						</Heading>
 						<Text
 							className={styles.textAlign}
 							variant="display-default-xs"
 							onBackground="neutral-weak">
-							{person.role}
+							{nftspage.description}
 						</Text>
 					</GlitchFx>
-					{/* <Text
-						className={styles.textAlign}
-						variant="display-default-s"
-						onBackground="neutral-weak">
-						{nftspage.title}
-					</Text>
-					<Text
-						className={styles.textAlign}
-						variant="display-default-s"
-						onBackground="neutral-weak">
-						{nftspage.description}
-					</Text> */}
 
 				</Flex>
 
 				{isLoading && (
-					<Flex fillWidth paddingX="20">
-						<Masonry
-							breakpointCols={breakpointColumnsObj}
-							className={styles.masonryGrid}
-							columnClassName={styles.masonryGridColumn}>
-							{Array.from({ length: nftsPerPage }).map((_, i) => (
-								<SmartImage
-									src=""
-									alt=""
-									aspectRatio="16/9"
-									radius="l"
-									isLoading
-								/>
-							))}
-						</Masonry>
-					</Flex>
+					<Spinner size="xl" />
 				)}
 
 				{nfts && !search && (
@@ -201,35 +169,7 @@ export default function Nfts(
 						<MasonryGrid nfts={nfts} />
 					</Flex>
 				)}
-				{/* 
-
-			{isSearching ? (
-          <div className="mx-auto !h-60 !w-60 animate-pulse rounded-lg bg-gray-800" />
-        ) : null}
-
-        {search && nft && !isSearching ? (
-          <NFTCard nft={nft} key={nft.id.toString()} />
-        ) : null}
-
-        {isLoading && (
-          <div className="mx-auto flex flex-wrap items-center justify-center gap-8">
-            {Array.from({ length: nftsPerPage }).map((_, i) => (
-              <div
-                className="!h-60 !w-60 animate-pulse rounded-lg bg-gray-800"
-                key={i}
-              />
-            ))}
-          </div>
-        )}
-
-        {nfts && !search && (
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            {nfts.map((nft) => (
-              <NFTCard nft={nft} key={nft.id.toString()} />
-            ))}
-          </div>
-        )} */}
-
+				
 			</Flex>
 		</Flex>
 	);

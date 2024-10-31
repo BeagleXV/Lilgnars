@@ -12,8 +12,9 @@ export const nftContract = getContract({
   // Your smart contract address (available on the thirdweb dashboard)
   // address: "0xed5af388653567af2f388e6224dc7c4b3241c544",
   
-  // 
-  address: "0xfe10d3ce1b0f090935670368ec6de00d8d965523",
+  // skatehive
+  // address: "0xfe10d3ce1b0f090935670368ec6de00d8d965523",
+  address: "0x880fb3cf5c6cc2d7dfc13a993e839a9411200c17",
   chain: base,
 
 
