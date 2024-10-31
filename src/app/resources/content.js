@@ -14,7 +14,7 @@ const person = {
 }
 
 const newsletter = {
-    display: true,
+    display: false,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
     description: <>Receive News About Lil Gnars Project and more awesome stuff.</>
 }
@@ -33,9 +33,14 @@ const social = [
     //     link: 'https://www.linkedin.com/company/once-ui/',
     // },
     {
+        name: 'Warpcast',
+        icon: 'farcaster',
+        link: 'https://warpcast.com/~/channel/gnars',
+    },
+    {
         name: 'X',
-        icon: 'X',
-        link: 'https://x.com/lilgnars',
+        icon: 'x',
+        link: 'https://twitter.com/lilgnars',
     },
     {
         name: 'Email',
@@ -64,7 +69,7 @@ const about = {
         display: true
     },
     calendar: {
-        display: true,
+        display: false,
         link: 'https://cal.com'
     },
     intro: {
@@ -134,12 +139,12 @@ const about = {
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'Estudo de Caso 1',
+                description: <>Caso 1.</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'Estudo de Caso 2',
+                description: <>Caso 2.</>,
             }
         ]
     },

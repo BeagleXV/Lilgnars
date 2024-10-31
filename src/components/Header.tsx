@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
 
-import { SparkleFx, Logo, NavIcon, SmartImage, Flex, ToggleButton } from "@/once-ui/components"
+import { Logo, NavIcon, SmartImage, Flex, ToggleButton, SparkleFx } from "@/once-ui/components"
 import styles from '@/components/Header.module.scss'
 
 import { routes, display } from '@/app/resources'
@@ -14,53 +14,18 @@ import { renderContent } from "@/app/resources";
 import { useTranslations } from "next-intl";
 import { i18n } from "@/app/resources/config";
 
+import { base } from "thirdweb/chains";
 import { ConnectButton } from "thirdweb/react";
-import { darkTheme } from "thirdweb/react";
+import { Theme, darkTheme } from "thirdweb/react";
 import { client } from "../app/client3w";
 
 
-type web3rdTheme = {
+const web3rdCustomTheme: Theme = darkTheme({
     colors: {
-      accentButtonBg: string;
-      accentButtonText: string;
-      accentText: string;
-      borderColor: string;
-      connectedButtonBg: string;
-      connectedButtonBgHover: string;
-      danger: string;
-      inputAutofillBg: string;
-      modalBg: string;
-      modalOverlayBg: string;
-      primaryButtonBg: string;
-      primaryButtonText: string;
-      primaryText: string;
-      scrollbarBg: string;
-      secondaryButtonBg: string;
-      secondaryButtonHoverBg: string;
-      secondaryButtonText: string;
-      secondaryIconColor: string;
-      secondaryIconHoverBg: string;
-      secondaryIconHoverColor: string;
-      secondaryText: string;
-      selectedTextBg: string;
-      selectedTextColor: string;
-      separatorLine: string;
-      skeletonBg: string;
-      success: string;
-      tertiaryBg: string;
-      tooltipBg: string;
-      tooltipText: string;
-    };
-    fontFamily: string;
-    type: "light" | "dark";
-  };
-
-const web3rdCustomTheme: web3rdTheme = darkTheme({
-    colors: {
-      modalBg: "red",
-      secondaryButtonBg: "violet",
+        primaryButtonBg: 'var(--accent-solid-strong)',
+        primaryButtonText:  'var(--neutral-on-background-strong)',
     },
-  });
+});
 
 type TimeDisplayProps = {
     timeZone: string;
@@ -127,17 +92,17 @@ export const Header = () => {
             justifyContent="center">
             <Flex
                 hide="s"
-                paddingLeft="12" fillWidth
+                fillWidth
+                paddingLeft="12"
                 alignItems="center"
                 style={{ background: 'transparent' }}
                 textVariant="body-default-s">
-                <SmartImage
-                    style={{ background: 'transparent' }}
-                    objectFit="contain"
-                    height={4}
-                    sizes={"100"}
-                    alt={""}
-                    src={'/logo-lilgnars.png'} />
+                <Logo
+                    size="xl"
+                    wordmark={false}
+                    iconSrc="/logo-lilgnars.png"
+                    href="/"
+                />
             </Flex>
             <Flex
                 hide="s"
@@ -147,21 +112,20 @@ export const Header = () => {
                 {display.location && (
                     <>{person.location}</>
                 )}
-
                 <SparkleFx
                     speed="slow"
                     count={50}
                     trigger
                 >
-
                     <ConnectButton
                         client={client}
+                        chain={base}
                         appMetadata={{
                             name: "LilGnars App",
                             url: "https://lilgnars.com",
                         }}
-                    />
-                </SparkleFx>
+                        theme={web3rdCustomTheme}
+                    /></SparkleFx>
             </Flex>
             <Flex
                 background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
@@ -226,6 +190,7 @@ export const Header = () => {
                 textVariant="body-default-s"
                 gap="20">
                 {routing.locales.length > 1 && <Flex
+                    hide="s"
                     background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
                     padding="4" gap="2"
                     justifyContent="center">

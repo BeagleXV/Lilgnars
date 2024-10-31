@@ -34,14 +34,19 @@ const createI18nContent = (t) => {
         //     link: 'https://www.linkedin.com/company/once-ui/',
         // },
         {
+            name: 'Warpcast',
+            icon: 'farcaster',
+            link: 'https://warpcast.com/~/channel/gnars',
+        },
+        {
             name: 'X',
             icon: 'x',
-            link: '',
+            link: 'https://twitter.com/lilgnars',
         },
         {
             name: 'Email',
             icon: 'email',
-            link: 'mailto:example@gmail.com',
+            link: 'mailto:lilgnars@gmail.com',
         },
     ]
 
@@ -65,7 +70,7 @@ const createI18nContent = (t) => {
             display: true
         },
         calendar: {
-            display: true,
+            display: false,
             link: 'https://cal.com'
         },
         intro: {
@@ -92,12 +97,12 @@ const createI18nContent = (t) => {
                     ]
                 },
                 {
-                    company: 'Lil Gnars - Parque Rita Lee',
+                    company: 'Lil Gnars - Parque Rita Lee1',
                     timeframe: t("about.work.experiences.Lil Gnars 2.timeframe"),
                     role: t("about.work.experiences.Lil Gnars 2.role"),
                     achievements: t("about.work.experiences.Lil Gnars 2.achievements").split(";"),
                     images: [ {
-                        src: '/images/projects/project-02/cover-01.jpg',
+                        src: '/images/projects/project-02/cover-01.jpeg',
                         alt: 'Lil Gnars 2',
                         width: 16,
                         height: 9
@@ -109,13 +114,13 @@ const createI18nContent = (t) => {
                     role: t("about.work.experiences.Lil Gnars 3.role"),
                     achievements: t("about.work.experiences.Lil Gnars 3.achievements").split(";"),
                     images: [ {
-                        src: '/images/projects/project-03/cover-01.jpg',
+                        src: '/images/projects/project-03/cover-02.jpg',
                         alt: 'Lil Gnars 3',
                         width: 16,
                         height: 9
                     },
                     {
-                        src: '/images/projects/project-03/cover-02.jpg',
+                        src: '/images/gallery/lilgnars-05.png',
                         alt: 'Lil Gnars 3',
                         width: 16,
                         height: 9
@@ -198,74 +203,64 @@ const createI18nContent = (t) => {
         // Images from https://pexels.com
         images: [
             {
-                src: '/images/gallery/ChuckSlappy.jpg',
-                alt: 'Lil Gnars ChuckSlappy',
+                src: '/images/gallery/lilgnars-01.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/Chuck_Assustando.jpg',
-                alt: 'Lil Gnars Chuck Assustando',
+                src: '/images/gallery/lilgnars-02.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'horizontal'
             },
             { 
-                src: '/images/gallery/corrida_doida.png',
-                alt: 'Lil Gnars corrida doida',
+                src: '/images/gallery/lilgnars-03.png',
+                alt: 'Lil Gnars',
                 orientation: 'vertical'
             },
             { 
-                src: '/images/gallery/Corrida_Maluca_Aterro.jpg',
-                alt: 'Lil Gnars Corrida Maluca Aterro',
+                src: '/images/gallery/lilgnars-04.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/Corrida_Maluca_aterro02.jpg',
-                alt: 'Lil Gnars Corrida Maluca aterro',
+                src: '/images/gallery/lilgnars-05.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/Eu_ajudando_a_Sininho_a_colar_o_adesivo_no_poste.jpg',
-                alt: 'Ajudando Sininho a colar adesivo',
+                src: '/images/gallery/lilgnars-06.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/jaguatirica0101.png',
-                alt: 'Lil Gnars mascote',
+                src: '/images/gallery/lilgnars-07.png',
+                alt: 'Lil Gnars',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/lanches_2_.jpg',
-                alt: 'Lil Gnars mascote',
+                src: '/images/gallery/lilgnars-08.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/lil01.jpg',
-                alt: 'Lil Gnars mascote',
+                src: '/images/gallery/lilgnars-09.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/lil02.jpg',
-                alt: 'Lil Gnars mascote',
+                src: '/images/gallery/lilgnars-10.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'horizontal'
             },
             {
-                src: '/images/gallery/lil04.jpg',
-                alt: 'Lil Gnars mascote',
+                src: '/images/gallery/lilgnars-11.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'vertical'
             },
             {
-                src: '/images/gallery/lil05.jpg',
-                alt: 'Lil Gnars mascote',
+                src: '/images/gallery/lilgnars-12.jpg',
+                alt: 'Lil Gnars',
                 orientation: 'horizontal'
-            },
-            {
-                src: '/images/gallery/Lil_Gnars_1a_Crew.jpg',
-                alt: 'Lil Gnars mascote',
-                orientation: 'horizontal'
-            },
-            {
-                src: '/images/gallery/Lilgnarscapivara.png',
-                alt: 'Lil Gnars mascote',
-                orientation: 'vertical'
             },
         ]
     }

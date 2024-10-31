@@ -1,6 +1,6 @@
 {
     "person": {
-        "role": "Projeto Skate for Life",
+        "role": "Quebrando Tudo, Sonhando Alto!",
         "scheduleclass": "Agendar uma Aula"
     },
     "newsletter": {
@@ -10,10 +10,10 @@
     },
     "home": {
         "label": "Home",
-        "title": "Projeto {name}",
-        "description": "Project website showcasing our work as a {role}",
-        "headline": "Projeto mto loko para levar skate life style...",
-        "subline": "Somos lil Ganrs um projeto social ... ... ... "
+        "title": "{name}: Quebrando Tudo, Sonhando Alto!",
+        "description": "O Lil Gnars tem uma missão: espalhar o amor pelo skate para crianças que mais precisam! Com nossas aulas, estamos ensinando mais do que manobras – estamos construindo confiança, comunidade e uma paixão de vida pelo skate. E o melhor: as crianças têm a chance de ganhar seu próprio skate, graças aos nossos parceiros e apoiadores irados!",
+        "headline": "Quebrando Tudo, Sonhando Alto!",
+        "subline": "Levando o Skate para Toda Criança"
     },
     "about": {
         "label": "Sobre",
@@ -29,17 +29,17 @@
                 "Lil Gnars 1": {
                     "timeframe": "2024",
                     "role": "Rio de Janeiro",
-                    "achievements": "Primeiro dia Lil Gnars.; Treinamento; Hora do Lanche; Corrida Maluca."
+                    "achievements": "We kicked off a class at one of Rio’s popular skate spots, introducing kids to the fundamentals and getting them on their boards for the first time. Every skater left with new skills and a full lunch."
                 },
                 "Lil Gnars 2": {
                     "timeframe": "2024",
-                    "role": "no Parque Rita Lee",
-                    "achievements": "Segundo dia do evento; Manobras com a nova geração do skate brasileiro; Muita Diversão e Skate!"
+                    "role": "at Rita Lee's Park",
+                    "achievements": "An exciting session at Rita Lee Park brought together kids from the area to skate, learn, and grow in confidence. It was all about community, connection, and carving those first lines—plus, every kid enjoyed a well-deserved lunch to power through the day."
                 },
                 "Lil Gnars 3": {
                     "timeframe": "2024",
-                    "role": "Dia de Churrasco",
-                    "achievements": "O último dia do Lil Gnars foi pura diversão; Skate e sorrisos; Churrasco no pôr do sol; Demos shapes novos Lil Gnars para as crianças!; A vibe era indescritível."
+                    "role": "Barbecue day",
+                    "achievements": "Our biggest event yet! We wrapped up an epic skate class with a BBQ, inviting kids and families to join in. It was all about having fun, sharing food, and celebrating the progress of our young skaters."
                 }
             }
         },
@@ -83,8 +83,8 @@
     },
     "nftspage": {
         "label": "NFT",
-        "title": "Nossos NFTs",
-        "description": "Minte seu NFT exclusivo da Lil Gnars agora!"
+        "title": "Gnars NFTs",
+        "description": "Minte seu NFT exclusivo da Lil Gnars!"
     },
     "projectCard": {
         "label": "Leia Mais"

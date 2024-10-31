@@ -1,3 +1,4 @@
+'use client'
 import useDebounce from "@/hooks/useDebounce";
 import { FC, useEffect, useState } from "react";
 

@@ -64,6 +64,11 @@ export function getPosts(customPath = ['', '', '', '']) {
     return getMDXData(postsDir);
 }
 
+export function getPostBySlug(slug: string, customPath = ['', '', '', '']) {
+    const postsDir = path.join(process.cwd(), ...customPath);
+    return readMDXFile(postsDir + '/'+ slug + '.mdx');
+}
+
 export function formatDate(date: string, includeRelative = false) {
     const currentDate = new Date();
 

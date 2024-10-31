@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button, Avatar, GlitchFx, RevealFx } from '@/once-ui/components';
+import { Heading, Flex, Text, Button, Avatar, SmartImage, SparkleFx, GlitchFx, RevealFx } from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
 import { baseURL, routes, renderContent } from '@/app/resources';
 import { Mailchimp } from '@/components';
 import { Posts } from '@/components/blog/Posts';
+import { PostContent } from '@/components/blog/PostContent';
+
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
@@ -74,69 +76,81 @@ export default function Home(
 					}),
 				}}
 			/>
-			<Flex
-				fillWidth
-				direction="column"
-				paddingY="l" gap="m">
+
+			<RevealFx translateY="8" delay={0.2}>
 				<Flex
-					direction="column"
-					fillWidth maxWidth="s" gap="m">
-					{/* <RevealFx translateY="4"> */}
+					fillWidth
+					direction="row"
+					paddingY="l" gap="m">
 					<GlitchFx
 						speed="medium"
 						interval={2500}
-						trigger="instant"
-					>
+						trigger="instant">
 						<Heading
 							wrap="balance"
 							variant="display-strong-l">
 							{home.headline}
 						</Heading>
-					</GlitchFx>
-					{/* </RevealFx> */}
-					<RevealFx translateY="8" delay={0.2}>
 						<Text
 							wrap="balance"
 							onBackground="neutral-weak"
 							variant="body-default-l">
 							{home.subline}
 						</Text>
-					</RevealFx>
-					<RevealFx translateY="12" delay={0.4}>
-						<Button
-							data-border="rounded"
-							href={`/${locale}/about`}
-							variant="tertiary"
-							suffixIcon="chevronRight"
-							size="m">
-							<Flex
-								gap="8"
-								alignItems="center">
-								{about.avatar.display && (
-									<Avatar
-										style={{ marginLeft: '-0.75rem', marginRight: '0.25rem' }}
-										src={person.avatar}
-										size="m" />
-								)}
-								{t("about.title")}
-							</Flex>
-						</Button>
-					</RevealFx>
-				</Flex>
+					</GlitchFx>
 
-			</Flex>
-			<RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1, 1]} locale={locale} />
-			</RevealFx>
-			{routes['/blog'] && (
-				<Flex fillWidth paddingX="20">
-					<Posts range={[1, 2]} columns="2" locale={locale} />
+					<SmartImage
+						style={{ background: 'transparent' }}
+						objectFit="contain"
+						height={12}
+						sizes='100'
+						alt={"Lil Gnars Logo"}
+						src={'/logo-lilgnars.png'} />
 				</Flex>
-			)}
-			<Projects range={[2]} locale={locale} />
-			{newsletter.display &&
+			</RevealFx>
+
+			{/* <Button
+				data-border="rounded"
+				href={`/${locale}/about`}
+				variant="tertiary"
+				suffixIcon="chevronRight"
+				size="l">
+				<Flex
+					gap="8"
+					alignItems="left">
+					{about.avatar.display && (
+						<Avatar
+							style={{ marginLeft: '-0.75rem', marginRight: '0.25rem' }}
+							src={person.avatar}
+							size="l" />
+					)}
+					{t("about.title")}
+				</Flex>
+			</Button> */}
+
+
+			<Flex fillWidth paddingX="20">
+				<PostContent slug={'about-lil-gnars'} locale={locale} />
+			</Flex>
+
+			{/* <RevealFx translateY="16" delay={0.6}>
+			<Projects range={[1, 1]} locale={locale} />
+			</RevealFx> */}
+
+			<Projects range={[1]} locale={locale} />
+
+			{
+				routes['/blog'] && (
+					<Flex fillWidth paddingX="20">
+						<Posts range={[1, 2]} columns="2" locale={locale} />
+					</Flex>
+				)
+			}
+
+			{
+				newsletter.display &&
 				<Mailchimp newsletter={newsletter} />
 			}
-		</Flex>
+		</Flex >
 	);
 }
