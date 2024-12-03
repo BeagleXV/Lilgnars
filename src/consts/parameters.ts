@@ -14,9 +14,11 @@ export const nftContract = getContract({
   
   // skatehive
   // address: "0xfe10d3ce1b0f090935670368ec6de00d8d965523",
-  address: "0x880fb3cf5c6cc2d7dfc13a993e839a9411200c17",
-  chain: base,
-
+  //gnars
+  // address: "0x880fb3cf5c6cc2d7dfc13a993e839a9411200c17",
+  //lil gnars
+  address: "0x4b10701Bfd7BFEdc47d50562b76b436fbB5BdB3B",
+  chain: ethereum,
 
   // The chain object of the chain your contract is deployed to.
   // If that chain isn't in the default list of our SDK, use `defineChain` - for example: defineChain(666666)
