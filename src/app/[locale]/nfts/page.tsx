@@ -3,7 +3,6 @@ import { Flex, Heading, Text, Spinner, GlitchFx } from "@/once-ui/components";
 import MasonryGrid from "@/components/nftspage/MasonryGrid";
 
 import { baseURL, renderContent } from "@/app/resources";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 
 import styles from '@/components/about/about.module.scss'
@@ -16,45 +15,9 @@ import { useReadContract } from "thirdweb/react";
 import { getContractMetadata } from "thirdweb/extensions/common";
 import { useEffect, useState } from "react";
 
-// export async function generateMetadata(
-// 	{params: {locale}}: { params: { locale: string }}
-// ) {
-
-// 	const t = await getTranslations();
-// 	const { gallery } = renderContent(t);
-
-// 	const title = gallery.title;
-// 	const description = gallery.description;
-// 	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
-
-// 	return {
-// 		title,
-// 		description,
-// 		openGraph: {
-// 			title,
-// 			description,
-// 			type: 'website',
-// 			url: `https://${baseURL}/${locale}/gallery`,
-// 			images: [
-// 				{
-// 					url: ogImage,
-// 					alt: title,
-// 				},
-// 			],
-// 		},
-// 		twitter: {
-// 			card: 'summary_large_image',
-// 			title,
-// 			description,
-// 			images: [ogImage],
-// 		},
-// 	};
-// }
-
 export default function Nfts(
 	{ params: { locale } }: { params: { locale: string } }
 ) {
-	// unstable_setRequestLocale(locale);
 	const t = useTranslations();
 	const { nftspage, person } = renderContent(t);
 
@@ -119,7 +82,7 @@ export default function Nfts(
 						'@type': 'ImageGallery',
 						name: nftspage.title,
 						description: nftspage.description,
-						url: `https://${baseURL}/gallery`,
+						url: `https://${baseURL}/nfts`,
 						image: nftspage.images.map((image: { src: any; alt: any; }) => ({
 							'@type': 'ImageObject',
 							url: `${baseURL}${image.src}`,
